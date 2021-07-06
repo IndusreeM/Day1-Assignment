@@ -1,0 +1,81 @@
+Question 1
+============
+ plot a line plot between a and b:
+a=np.arange(40,50)
+b=np.arange(50,60)
+code:
+=====
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+a=np.arange(40,50)
+b=np.arange(50,60)
+plt.title("Line Plot",color='blue')
+plt.xlabel("x-axis-a",color='r')
+plt.ylabel("y-axis-b",color='g')
+plt.plot(a,b,'b*--',linewidth=3,markersize=10)
+plt.show()
+=====================================
+Question 2:
+============
+Plot a line plot showing the sales trend in company 1 and 2:
+days = [1,2,3,4,5,6,7] #days of d week
+sales_1 = [160,150,140,145,175,165,180] #sales of company1
+sales_2 = [70,90,160,150,140,145,175]  #sales of company2
+code:
+====
+import numpy as np
+import pandas as pd
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+days = [1,2,3,4,5,6,7]
+sales_1 = [160,150,140,145,175,165,180]
+sales_2 = [70,90,160,150,140,145,175]
+plt.title("sales of Company1 and Company 2",color='b')
+plt.xlabel('days',color='red')
+plt.ylabel("company1 and company2 sales",color='b')
+plt.plot(days,sales_1,'g*--',linewidth=2,markersize=10)
+plt.plot(days,sales_2,'bo--',linewidth=3,markersize=10)
+plt.show()
+=============================================
+Question 3
+==========
+ Create a 3 by 3 subplots:
+multiple plots
+x = [1,2,3,4]
+y1 = [4,3,2,1]
+y2 = [10,20,30,40]
+y3 = [40,30,20,10]
+y4 = [1,2,1,2]
+y5 = [40,70,90,70]
+code:
+====
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+x = [1,2,3,4]
+y1 = [4,3,2,1]
+y2 = [10,20,30,40]
+y3 = [40,30,20,10]
+y4 = [1,2,1,2]
+y5 = [40,70,90,70]
+plt.subplot(3,3,1)
+plt.plot(x,y1,'r--',linewidth=3,markersize=13)
+plt.subplot(3,3,2)
+plt.plot(x,y2,'b--',linewidth=3,markersize=13)
+plt.subplot(3,3,3)
+plt.plot(x,y3,'g--',linewidth=3,markersize=13)
+plt.subplot(3,3,4)
+plt.plot(x,y4,'r*',linestyle="solid",linewidth=3,markersize=13)
+plt.subplot(3,3,5)
+plt.plot(x,y5,'b*',linestyle="solid",linewidth=3,markersize=13)
+plt.subplot(3,3,6)
+plt.plot(x,y1,'g*',linestyle="solid",linewidth=3,markersize=13)
+plt.subplot(3,3,7)
+plt.plot(x,y2,'bo',linestyle="dotted",linewidth=3,markersize=13)
+plt.subplot(3,3,8)
+plt.plot(x,y3,'go',linestyle="dotted",linewidth=3,markersize=13)
+plt.subplot(3,3,9)
+plt.plot(x,y4,'ro',linestyle="dotted",linewidth=3,markersize=13)
+plt.show()
+
